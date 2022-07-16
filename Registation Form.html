@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registation Form</title>
+        <style>
+    table,td {
+    border-spacing: 20px;
+    border-radius: 10px;
+    }
+    body{
+        background-color: blueviolet;
+    }
+    td{
+        font-style:bold;
+        font-size:18px;
+        padding: 5px;
+    }
+    input{
+            border: 2px solid rgb(252, 248, 248);
+            border-radius: 5px ;
+            height: 20px;
+            display: inline;
+        }
+    .vc{
+        width: 30px;
+        height: 13px;
+    }
+    .se{
+        width: 50px;
+        height: 25px;
+        border: 2px solid rgb(252, 248, 248);
+        border-radius: 5px ;
+    }
+    .subm{
+        border: 2px solid rgb(252, 248, 248);
+        border-radius: 5px ;
+        height: 20px;
+        text-align: center;
+        margin: 10px;
+    }
+    .coun{
+        border: 2px solid rgb(252, 248, 248);
+        border-radius: 5px ;
+        height: 20px;
+    }
+    .all{
+        display: inline;
+    }
+    </style>
+    <script src="C:\Users\SHIVANI\Desktop\Website\Forms\Registation Form.js"></script>
+    </head>
+    <body>
+        <p>View Count:
+            <img  class="vc" src="https://hitwebcounter.com/counter/counter.php?page=8013102&style=0036&nbdigits=3&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
+        </p>
+        <center>
+        <table>
+            <caption><h2>Registation Form</h2></caption>
+            <form action="shivani" method="post" onsubmit="return validity();">
+                <tr>
+                    <td>
+                        <label>First Name:</label>
+                        <td><input type="text" id="first" maxlength="20" onkeyup="fn();">
+                        <label id="lab1"  style="visibility: hidden;"></label>
+                    </td>
+                    <td>
+                        <label for="l">Middle Name:</label>
+                        <td><input  type="text" id="mid" maxlength="20">
+                    </td>
+                </tr>
+                    <tr>
+                        <td>
+                            <label for="first">Last Name:</label>
+                            <td><input  type="text" id="last" maxlength="20">
+                                <label id="lab2"  style="visibility: hidden;"></label>
+                        </td>
+                        <td>
+                            <label for="last">Full Name:</label>
+                            <td><input type="text" id="full" maxlength="20">
+                        </td>
+                    </tr>
+                        <tr>
+                            <td>
+                                <label for="fat">Father Name:</label>
+                                <td><input type="text" id="fat"  maxlength="20">
+                            </td>
+                            <td>
+                                <label for="mot">Mother Name:</label>
+                                <td><input  type="text" id="mot" maxlength="20">
+                            </td>
+                        </tr>
+                        <td>
+                            <label for="con">Country:</label> 
+                            <td><select  id="con" name="con" class="coun">
+                            <option value="Andhra Pradesh">India</option>
+                            <option value="Telengana">USA</option>
+                            <option value="Bihar">UK</option>
+                            <option value="Assam">Astrilia</option>
+                            <option value="Karnataka">Bangladesh</option>
+                            <option value="Bengal">China</option>
+                            </select>
+                        </td>
+                        <td>
+                            State:
+                            <td><select  id="sta" name="sta" class="coun">
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Telengana">Telengana</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Bengal">Bengal</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label >Gender:</label>
+                            <td>
+                            <input  type="radio" id="m" name="gen">
+                            <label for="m">Male</label>
+                            <input type="radio" id="f" name="gen">
+                            <label for="f">Female</label>
+                        </td>
+                        <td>
+                            <label for="ho">Hobbies:</label>
+                            <td>
+                            <input type="checkbox" id="vg" name="ho">
+                            <label for="vg">Video Games</label>
+                            <input type="checkbox" id="bn" name="ho">
+                            <label for="bn">Broswing Net</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email:
+                            <td><input type="email" id="email" maxlength="20">
+                            <label id="lab3"></label>
+                        </td>
+                        <td>
+                            <label for="img">Upload Photo:</label>
+                            <td><input type="file" id="img">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="bof">Date Of Birth:</label>
+                            <td><input  type="date" id="bof">
+                        </td>
+                        <td>
+                            <label for="address">Address:</label>
+                            <td><input  type="text" id="address">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label id="mm">Mobile Number:</label></td>
+                            <td><select class="se" id="select">
+                                <option value="(+91)">+91</option>
+                                <option value="(+0)">+0</option>
+                                <option value="(+0)">+12</option>
+                            </select>
+                                <input  type="number" id="mob" maxlength="10" min="1">
+                            <label id="lab4" style="visibility: hidden;"></label>
+                        </td>
+                        <td>
+                            <label for="pm">Parent Mobile Number:</label>
+                            <td><input type="number" id="pm" maxlength="10" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pass">Password:</label>
+                            <td><input type="password" id="pass" maxlength="6">
+                        </td>
+                        <td>
+                            <label for="pss">Confirm Password:</label>
+                            <td><input  type="password" id="cpass" maxlength="6">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Show Password:<input type="checkbox" id="check1" onclick="showpass();">
+                        </td>
+                        <td></td>
+                        <td>Show Password:
+                            <input type="checkbox" id="check2" onclick="confirmpass();">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+
+                        <td><input type="submit" value="Submit" id="sb" class="subm"> </td>
+                        <td><input type="reset"  value="Reset" id="rt" class="subm"> </td>
+                    </tr>
+                </tr>  
+            </form>
+        </table>
+        <input type="checkbox" id="term"  class="all" required><label class="all">I Accepct All The Terms And Contidions</label>
+    </center>
+    </body>
+</html>

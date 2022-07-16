@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image slider</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" >
+    <style>
+         *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+                
+            }
+            .container{
+                width:250px;
+                height:100px;
+                align-items: center;
+                justify-content: center;
+            }
+            .swiper{
+                width:250px;
+                height:100px;
+                height: fit-content;
+            }
+            .swiper-slide img{
+                width:250px;
+                height: 250px;
+                align-items: center;
+                justify-content: center;
+            }
+            .swiper-wrapper{
+                position: relative;
+                z-index: -1;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="C:\Users\SHIVANI\Pictures\Wallerpapers\HP-1.jpg"></div>
+              <div class="swiper-slide"><img src="C:\Users\SHIVANI\Pictures\Wallerpapers\Lenovo-1.jpg"></div>
+              <div class="swiper-slide"><img src="C:\Users\SHIVANI\Pictures\Wallerpapers\MAC-1.jpg"></div>
+              <div class="swiper-slide"><img src="C:\Users\SHIVANI\Pictures\Wallerpapers\Dell-1.jpeg"></div>
+              <div class="swiper-slide"><img src="C:\Users\SHIVANI\Pictures\Wallerpapers\HP-2.jpg"></div>
+            </div>
+             <div class="swiper-pagination"></div>
+             <div class="swiper-button-prev"></div>
+             <div class="swiper-button-next"></div>
+            </div>
+        </div>
+       <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+       <script>
+        const swiper = new Swiper('.swiper', {
+                autoplay:{
+                    delay:3000,
+                    disableOnInteraction:false,
+
+                },
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable:true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+       </script>
+    </body>
+</body>

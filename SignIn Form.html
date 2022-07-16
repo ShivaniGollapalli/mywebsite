@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SingIn Page</title>
+        <style>
+            body{
+                background:linear-gradient(to right, #0f2027,#203a43,#2c5364);
+                font-family:sans-serif;
+            }
+
+            table{
+                border: 2px solid black;
+                border-radius: 10px;
+                margin: 150px;
+                border-spacing: 20px;
+            }
+            #label{
+                padding: 10px;
+                margin: 10px;
+                color: black;
+                font-size: large;
+                font-weight:bold;
+            }
+            input{
+                padding: 10px;
+                margin: 10px;
+                border-radius: 8px;
+                height: 10px;
+            }
+            #log{
+                padding: 10px;
+                text-align: center;
+                margin: 10px;
+                border-radius: 5px;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <table>
+                <form action="shivani.php" method="post" onsubmit=" return validity();">
+                    <tr>
+                        <td colspan="2" align="center"><h2>Login Form</h2></td>
+                    </tr>
+                    <tr>
+                        <td><label id="label">User ID:</label></td>
+                        <td><input type="text" id="user"><label id="lab1"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label id="label">Password:</label></td>
+                        <td><input type="password" id="password"><label id="lab2"></label></td>
+                    </tr>
+                    <tr colspan="2" align="center">
+                        <td><input id="log" type="submit" value="Log In"></td>
+                    </tr>
+                </form>
+            </table>
+        </center>
+
+
+        function validity()
+        {
+            if(user() && pass())
+            {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+            function user()
+            {
+                var uname=document.getElementById("user").value;
+                var regu=/^(n|N)18(0|1)\d{3}$/
+                if(regu.test(uname))
+                {
+                    return true;
+                }
+                else
+                {
+                    document.getElementById("user").style.border="2px solid red";
+                    document.getElementById("lab1").innerHTML="Invalid ID No";
+                    document.getElementById("lab1").style.visibility="visible";
+                    return false;
+                }
+            }
+
+                function pass()
+                {
+                    var word=document.getElementById("password").value;
+                    if(word=="")
+                    {
+                        document.getElementById("word").style.border="2px solid red";
+                        document.getElementById("lab2").innerHTML="Fill Password";
+                        document.getElementById("word").style.visibility="visible";
+                        return false;
+                    }
+                    if(word.length>=6)
+                    {
+                        document.getElementById("word").style.border="2px solid red";
+                        document.getElementById("lab2").innerHTML="Password must contains 6 characters";
+                        document.getElementById("word").style.visibility="visible";
+                        return false;
+                    }
+                    return true;
+                }
+        </script>
+    </body>
+</html>
